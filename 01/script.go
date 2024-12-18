@@ -15,7 +15,20 @@ func splitIntoTwoSlices(input [][]int) ([]int, []int) {
 	return list1, list2
 }
 
-func process(input []string) int {
+func makeMap(input []int) (map[int]int) {
+	output := make(map[int]int)
+	for _, x := range input {
+		x_count, x_present := output[x]
+		if !x_present {
+			output[x] = 1
+		} else {
+			output[x] = x_count + 1
+		}
+	}
+	return output
+}
+
+func part01_process(input []string) int {
 	// Turn string input into two unsorted lists of ints
 	input_ints := readFile.SplitByWhiteSpaceToInts(input)
 	list1, list2 := splitIntoTwoSlices(input_ints)
@@ -35,11 +48,31 @@ func process(input []string) int {
 	return sum
 }
 
+func part02_process(input []string) int {
+	// Turn string input into two unsorted lists of ints
+	input_ints := readFile.SplitByWhiteSpaceToInts(input)
+	list1, list2 := splitIntoTwoSlices(input_ints)
+
+
+	list2_map := makeMap(list2)
+
+	// Compare each set
+	var sum = 0
+	for _, y := range list1 {
+		score := y * list2_map[y]
+		sum += score
+	}
+
+	// Print and return
+	return sum
+}
+
 func testRun() {
 	input, err := readFile.ReadLines("./test-input.txt")
 	fmt.Println("---Test Data---")
 	fmt.Println("Errors? ", err)
-	fmt.Println("Result: ", process(input))
+	fmt.Println("Result Part01: ", part01_process(input))
+	fmt.Println("Result Part02: ", part02_process(input))
 	fmt.Println()
 }
 
@@ -47,7 +80,8 @@ func realRun() {
 	input, err := readFile.ReadLines("./input.txt")
 	fmt.Println("---Input Data---")
 	fmt.Println("Errors? ", err)
-	fmt.Println("Result: ", process(input))
+	fmt.Println("Result Part01: ", part01_process(input))
+	fmt.Println("Result Part02: ", part02_process(input))
 	fmt.Println()
 }
 
