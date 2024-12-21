@@ -10,3 +10,7 @@ github.com/sarahangle/goLib v0.0.0-20241218224050-8f64f80daa3a h1:dKzyQmdBe+9ES0
 github.com/sarahangle/goLib v0.0.0-20241218224050-8f64f80daa3a/go.mod h1:YiA4yEQWuBpyrbO7HevY9RMtVbJS6byhU6Y1ZDt3w4w=
 github.com/sarahangle/goLib v0.0.0-20241218232814-30ec79d4740b h1:2Kdz0gX+l6zTdosFEG4BEE+slLu68B6K4fKnr0fE1j4=
 github.com/sarahangle/goLib v0.0.0-20241218232814-30ec79d4740b/go.mod h1:YiA4yEQWuBpyrbO7HevY9RMtVbJS6byhU6Y1ZDt3w4w=
+github.com/sarahangle/goLib v0.0.0-20241221201740-65b0b3d2e7ca h1:DLgs6HcDP6Ma/zh2I8Lrv0lDhxWTOltisWZRs1nN27g=
+github.com/sarahangle/goLib v0.0.0-20241221201740-65b0b3d2e7ca/go.mod h1:YiA4yEQWuBpyrbO7HevY9RMtVbJS6byhU6Y1ZDt3w4w=
+github.com/sarahangle/goLib v0.0.0-20241221202627-0e02eba8af5f h1:UdYwXlTYDKHDEba71vnWUOwbi9g6gPG6DSzsV3S9nEE=
+github.com/sarahangle/goLib v0.0.0-20241221202627-0e02eba8af5f/go.mod h1:YiA4yEQWuBpyrbO7HevY9RMtVbJS6byhU6Y1ZDt3w4w=
